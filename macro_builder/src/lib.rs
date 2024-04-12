@@ -1,9 +1,8 @@
 
-use std::{any::Any, fmt::Debug};
 
 use proc_macro::TokenStream;
 use quote::{format_ident, quote, ToTokens};
-use syn::{parse_macro_input, spanned::Spanned, token::Token, Attribute, DeriveInput, Meta, MetaList};
+use syn::{parse_macro_input, spanned::Spanned, Attribute, DeriveInput, Meta, MetaList};
 
 #[proc_macro_derive(Builder, attributes(expand, variance))]
 pub fn derive(input: TokenStream) -> TokenStream {
